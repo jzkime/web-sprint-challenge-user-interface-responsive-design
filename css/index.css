@@ -22,7 +22,11 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
+/* test placement */
+    /* border: 1px solid rgb(219, 219, 219); */
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -65,6 +69,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
@@ -91,6 +96,38 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+}
+
+/* my edits */
+
+.headerStyle {
+    background-color: rgb(0, 4, 17, .8);
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.headerStyle nav i {
+    font-size: 3.5rem;
+    margin: 1%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
 }
 
 /* spacers */
@@ -108,15 +145,38 @@ header {
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
+    /* When this was on and I had the inspect window open, the about section
+    and the food gallery would overlap each other */
+    /* height: 120vh; */
     text-align: center;
     background-color: rgb(0, 4, 17);
+    padding-top: 2%;
+}
+
+.gallery div {
+    display: block;
+}
+
+.gallery div h2 {
+    width: 100%;
+}
+
+.galleryImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 3%; */
+}
+
+.galleryImages img {
+    margin: 3rem;
 }
 
 /* about us section */
 .about {
+    display: block;
     width: 100%;
-    height: 75vh;
+    /* height: 75vh; */
     text-align: center;
     background-image: url("../img/staff-cooks.jpg");
     background-size: cover;
@@ -191,9 +251,52 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
+    height: 100%;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+}
+
+form h4 {
+    font-size: 4rem;
+}
+
+.footerStyle form input {
+    height: 50%;
+    width: 45%;
+    font-size: 2.90rem
+}
+
+.footerStyle form button {
+    height: 50%;
+    width: 30%;
+    font-size: 2.90rem;
+}
+
+.footerStyle form {
+    height: 100%;
+    width: 40vw;
+    text-align: center;
+}
+
+.footerStyle {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    padding-bottom: 2%;
+}
+
+.footerStyle nav {
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#copyright {
+    font-size: 2rem;
+    text-align: end;
+    width: 100%;
+    padding-right: 10%;
 }
 
 /* mobile media query */
