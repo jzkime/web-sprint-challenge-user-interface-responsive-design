@@ -22,9 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-
-/* test placement */
-    /* border: 1px solid rgb(219, 219, 219); */
+    /* border: 1px solid red; */
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -34,7 +32,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    width: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -54,7 +51,7 @@ table {
 
 * {
     box-sizing: border-box;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 html {
@@ -66,6 +63,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    /* overflow-x: hidden; */
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
@@ -91,7 +89,7 @@ p, a {
 
 /* header section */
 header {
-    width: 100vw;
+    /* width: 100%; */
     height: 100vh;
     background-image: url('../img/home-header.jpg');
     background-size: cover;
@@ -119,21 +117,21 @@ nav {
 .links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     height: 35%;
 }
 
 .links a {
-    padding: 1%;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 100%;
 }
 
 .navIcons {
     margin-right: 2.5%;
     margin-left: 2.5%;
-    height: 5%;
+    height: 30%;
     padding-bottom: 2%;
 }
 
@@ -258,6 +256,10 @@ nav {
     width: 25%;
 }
 
+#email {
+    word-wrap: break-word;
+}
+
 /* footer section */
 footer {
     width: 100%;
@@ -316,48 +318,130 @@ form h4 {
     padding-right: 10%;
 }
 
-/* mobile media query */
-@media (max-width: 428px) {
+@media (max-width: 1024px) {
 
-    /* html {
-        max-width: 428px;
-        min-width: none;
-        font-size: 50%;
-    } */
-
-    html, body {
-        overflow-x: hidden;
+    .headerStyle {
+        padding: 2%;
     }
 
-    body {
-        position: relative;
+    .headerStyle h1 {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 6rem;
+    }
+
+    .navIcons {
+        padding-bottom: 4%;
+    }
+
+    .galleryImages img {
+        /* margin: 3rem; */
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .about-container .text {
+        width: 80%;
+    }
+    
+    .info {
+        /* display: flex; */
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .address h3, .hours h3, .contacts h3 {
+        font-size: 4rem;
+    }
+
+    .address address p, .hours div p, .contacts div a {
+        font-size: 2.6rem;
+    }
+
+    .address {
+        width: 50%;
+    }
+    
+    .hours {
+        width: 100%;
+        order: -1;
+        padding-bottom: 2.5vh;
+    }
+    
+    .contacts {
+        width: 50%;
+    }
+
+    .contacts div {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+
+    
+    .footerStyle {
+        display: flex;
+        flex-flow: column wrap;
         width: 100%;
     }
+
+    .footerStyle form {
+        width: 100vw;
+    }
+    
+    .footerStyle nav {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 4%;
+    }
+    
+    .footerStyle nav a {
+        padding: 1%;
+    }
+}
+
+/* mobile media query */
+@media (max-width: 428px) {
 
     /* header section */
     header {
         height: 150vh;
     }
     
-    h1 {
+    .headerStyle h1 {
         font-size: 4rem;
-        text-align: center;
+        width: 95%;
+        /* text-align: center; */
     }
     
     .headerStyle {
-        padding: 13%;
+        padding: 12%;
         padding-bottom: 5%;
+    }
+
+    .headerStyle nav {
+        height: 50%;
     }
     
     .links {
         flex-flow: column nowrap;
         align-items: center;
-        margin-top: 8%;
+        margin-top: 25%;
         margin-bottom: 5%;
     }
+
+    .links a {
+        margin: 3%;
+    }
+
+    .navIcons {
+        padding-bottom: 0;
+    }
     
-    .headerStyle nav i {
-        font-size: 3rem;
+    .navIcons i {
+        /* font-size: 3rem; */
         margin-right: 2%;
         margin-left: 2%;
     }
@@ -375,6 +459,7 @@ form h4 {
     
     .gallery div h2 {
         /* width: 100%; */
+        font-size: 3.5rem;
         padding: 5%;
         padding-top: 10%;
     }
