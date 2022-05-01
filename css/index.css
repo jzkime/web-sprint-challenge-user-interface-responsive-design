@@ -22,7 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -341,7 +341,6 @@ form h4 {
     }
 
     .links {
-        margin-top: 5%;
         height: 70%;
     }
 
@@ -421,7 +420,6 @@ form h4 {
 
     form h4 {
         font-size: 4rem;
-        padding: 3%;
         padding-bottom: 6%;
     }
     
